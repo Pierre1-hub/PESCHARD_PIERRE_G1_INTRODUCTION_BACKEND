@@ -8,3 +8,4 @@ backend
 
 - Les promotions du jour sont chargées automatiquement → Technologies : PHP, MySQL
 - Les produits recommandés sont générés selon l'utilisateur connecté → Technologies : Python, MongoDB
+- Les suggestions dans la barre de recherche sont envoyées en temps réel → Technologies : Node.js, PostgreSQL
