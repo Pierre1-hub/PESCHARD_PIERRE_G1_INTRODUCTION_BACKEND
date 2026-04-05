@@ -1,0 +1,11 @@
+{
+    "name": "pierr/js",
+    "autoload": {
+        "psr-4": {
+            "Pierr\\Js\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.10"
+    }
+}

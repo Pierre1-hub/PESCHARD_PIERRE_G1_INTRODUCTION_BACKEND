@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <a href="index.html"><img src="Image/logo.png" alt="Logo" /></a>
+    <!--message d'erreur-->
+<div class="message-error" id="errorContainer">
+    <li id="errorList">Le champ pseudo doit contenir au moins 6 caractères</li>
+</div>
+<!--notification de success-->
+<div class="message-success" id="successContainer">
+    <li id="SuccessList">Formulaire envoyé !</li>
+</div>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <div>
+        <!--section pseudo-->
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo">
+    </div>
+
+    <div>
+        <!--section email-->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+
+    <div>
+        <!--section mot de passe-->
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password">
+    </div>
+
+    <div>
+        <!--section mot de passe (vérification)-->
+        <label for="password2">Entrer à nouveau le mot de passe</label>
+        <input type="password" name="password2" id="password2">
+    </div>
+    <h2>Vous allez bien ? (falcutatif)</h2>
+<div>
+    <div>
+        <input type="radio" name="humeur" id="triste">
+        <label for="triste">Triste</label>
+    </div>
+    <div>
+        <input type="radio" name="humeur" id="normal"> <!--question de type radio-->
+        <label for="normal">Normal</label>
+    </div>
+    <div>
+        <input type="radio" name="humeur" id="joyeux">
+        <label for="joyeux">Joyeux</label>
+    </div>
+</div>
+
+<!--boutton submit-->
+    <button type="submit">S'inscrire</button>
+</form>
+    <script src="form.js"></script>
+</body>
+</html>

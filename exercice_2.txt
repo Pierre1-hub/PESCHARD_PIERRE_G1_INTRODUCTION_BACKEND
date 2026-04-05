@@ -1,0 +1,10 @@
+frontend
+
+- La barre de recherche en haut de la page → Technologies : HTML, CSS
+- Le carrousel de publicités qui défile → Technologies : JavaScript
+- Les catégories de produits avec leurs images → Technologies : HTML, CSS
+
+backend
+
+- Les promotions du jour sont chargées automatiquement → Technologies : PHP, MySQL
+- Les produits recommandés sont générés selon l'utilisateur connecté → Technologies : Python, MongoDB

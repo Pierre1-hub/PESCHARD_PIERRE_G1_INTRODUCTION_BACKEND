@@ -1,0 +1,11 @@
+{
+    "name": "pierr/js_avanc-2-main",
+    "autoload": {
+        "psr-4": {
+            "Pierr\\JsAvanc2Main\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.10"
+    }
+}

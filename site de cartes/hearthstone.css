@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  color: lightskyblue;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px 30px;
+  border: 2px solid black;
+}
+
+.logo img {
+  width: 110px;
+  height: 70px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  background: transparent;
+  border: 2px solid lightskyblue;
+  color: lightskyblue;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: lightskyblue;
+  color: white;
+}
+
+main {
+  background-color: rgb(71, 68, 68);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: lightskyblue;
+  margin-bottom: 10px;
+}
+
+.section-p {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-container input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid lightskyblue;
+  background: transparent;
+  color: white;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.6);
+}
+
+.search-container button {
+  margin-left: 10px;
+}
+
+#result {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+#result p {
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+footer p {
+  width: 400px;
+  font-size: larger;
+}
+
+.footer_boutton {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 400px;
+  margin-bottom: 50px;
+}
+
+footer a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+.btn_footer {
+  padding: 15px 30px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn_footer:hover {
+  background: #2ecc71;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}

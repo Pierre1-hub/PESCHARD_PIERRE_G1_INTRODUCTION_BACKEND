@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header2">
+        <a href="index.html"><img src="Image/logo.png" class="logo2"/></a>
+      <h1>
+        Découvre les nouvelles cartes exclusive en 3d sur ton navigateur !
+      </h1>
+    </div>
+    <main>
+      <model-viewer
+        src="models/lord_jaraxxus_3d_card.glb"
+        orientation="0deg 0deg 270deg"
+        camera-controls
+        auto-rotate
+        style="width: 80%; height: 500px; display: block; margin: auto;"   
+      >
+      </model-viewer>
+            <model-viewer
+        src="models//hearthstone_card.glb"
+        orientation="0deg 0deg 270deg"
+        camera-controls
+        auto-rotate
+        style="width: 80%; height: 500px; display: block; margin: auto;"
+      >
+      </model-viewer>
+    </main>
+        <footer id="footer">
+      <div>
+        <h1 id="title3">Contact us</h1>
+      </div>
+      <div class="footer_boutton">
+        <p id="text3">
+          Vous pouvez retrouver toutes les références, les cartes officielles et
+          les moyens de contact sur le site officiel de Hearthstone.
+        </p>
+        <a href="https://playhearthstone.com" class="btn_footer"
+          >Site officiel</a
+        >
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
+</html>

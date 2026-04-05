@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="hearthstone.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="Image/logo.png" alt="Logo" />
+        </div>
+        <nav>
+            <a href="index.html"><button class="button">Retour</button></a>
+            <a href="form.html"><button class="button">Compte</button></a>
+            <button class="button">A propos</button>
+        </nav>
+    </header>
+
+    <main id="fond">
+        <h2 class="section-title">Recherche de carte</h2>
+        <p class="section-p">Parcourir les cartes Hearthstone</p>
+
+        <div class="search-container">
+            <button id="prev" class="button">Précédent</button>
+            <button id="next" class="button">Suivant</button>
+        </div>
+
+        <div id="result"></div>
+    </main>
+
+    <footer id="footer">
+        <div>
+            <h1 id="title3">Contact us</h1>
+        </div>
+        <div class="footer_boutton">
+            <p id="text3">Vous pouvez retrouver toutes les références, les cartes officielles et les moyens de contact sur le site officiel de Hearthstone.</p>
+            <a href="https://playhearthstone.com" class="btn_footer">Site officiel</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        let page = 1; // Page actuelle
+
+        function loadCard() {
+            const url = `card.php?page=${page}`; // URL avec le numéro de pages
+
+            fetch(url) // Requête vers card.php
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur reseau ou API');
+                    }
+                    return response.json(); // On convertit en JSON
+                }).then(data => {
+                    const resultDiv = document.getElementById('result');
+                    const card = data.cards[0]; // On prend la première cartes
+
+                    resultDiv.innerHTML = `
+                    <p>Page : ${page}</p>
+                    <p>Nom : ${card.name ?? 'N/A'}</p>
+                    <p>Type : ${card.type?.name ?? 'N/A'}</p>
+                    <p>Classe : ${card.class?.name ?? 'N/A'}</p>
+                    <p>Rareté : ${card.rarity?.name ?? 'N/A'}</p>
+                    <p>Mana : ${card.manaCost ?? 'N/A'}</p>
+                    <p>Texte : ${card.text ?? 'N/A'}</p>
+                    `
+                }).catch(error => {
+                console.log('Erreur :' .error); // On affiche l'erreur dans la console
+                document.getElementById('result').innerText = 'Erreur lors de la récupération des données';
+                });
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            page++; // Page suivante
+            loadCard();
+        })
+
+        document.getElementById('prev').addEventListener('click', () => {
+            if (page > 1) { // On vérifie qu'on est pas à la première page
+                page--; // Page précedente
+                loadCard();
+            }
+        })
+
+        loadCard(); // Chargement au démarrage
+    </script>
+</body>
+</html>
